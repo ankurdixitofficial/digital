@@ -59,7 +59,7 @@ const Hero = () => {
           variants={itemVariants}
           className="text-[--text-color] max-w-xl mb-12 text-lg"
         >
-          I&apos;m a software engineer specializing in building exceptional digital experiences.
+          I&apos;m a software gandu engineer specializing in building exceptional digital experiences.
           Currently, I&apos;m focused on building accessible, human-centered products.
         </motion.p>
         
