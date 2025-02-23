@@ -2,13 +2,15 @@
 
 import { motion } from 'framer-motion';
 import { FiSun, FiMoon } from 'react-icons/fi';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '@/context/ThemeContext';
+
+const MotionButton = motion.button;
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <motion.button
+    <MotionButton
       onClick={toggleTheme}
       className="relative w-16 h-8 rounded-full bg-[var(--madder)] p-1 transition-colors duration-200"
       whileHover={{ scale: 1.05 }}
@@ -32,7 +34,7 @@ const ThemeToggle = () => {
         <FiSun className="w-4 h-4 text-[var(--snow)]" />
         <FiMoon className="w-4 h-4 text-[var(--snow)]" />
       </div>
-    </motion.button>
+    </MotionButton>
   );
 };
 
