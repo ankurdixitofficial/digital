@@ -3,12 +3,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FiArrowUp } from 'react-icons/fi';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Skills from '../components/Skills';
-import Work from '../components/Work';
-import Contact from '../components/Contact';
-import Resume from '../components/Resume';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Skills from '@/components/Skills';
+import Work from '@/components/Work';
+import Contact from '@/components/Contact';
+import Resume from '@/components/Resume';
 
 export default function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from '../components/ThemeContext';
-import Navbar from '../components/Navbar';
+import { ThemeProvider } from '@/components/ThemeContext';
+import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   title: "Ankur Dixit | Portfolio",
