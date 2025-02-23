@@ -6,6 +6,17 @@ import Navbar from '@/components/Navbar';
 export const metadata: Metadata = {
   title: "Ankur Dixit | Portfolio",
   description: "Software engineer specializing in building exceptional digital experiences",
+  icons: {
+    icon: [
+      {
+        url: '/assets/l3.png',
+        href: '/assets/l3.png',
+      }
+    ],
+    apple: '/assets/l3.png',
+    shortcut: '/assets/l3.png',
+  },
+  manifest: '/manifest.json'
 };
 
 export default function RootLayout({

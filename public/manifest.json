@@ -1,0 +1,21 @@
+{
+  "name": "Ankur Dixit Portfolio",
+  "short_name": "Ankur Dixit",
+  "icons": [
+    {
+      "src": "/assets/l3.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/l3.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FCF7F8",
+  "background_color": "#FCF7F8",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+} 

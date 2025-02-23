@@ -34,11 +34,14 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
+}
+
+body {
   cursor: none;
 }
 
 @media (max-width: 768px) {
-  * {
+  body {
     cursor: auto !important;
   }
   .cursor,
@@ -77,6 +80,12 @@
 
 a, button {
   cursor: none;
+}
+
+@media (max-width: 768px) {
+  a, button {
+    cursor: pointer !important;
+  }
 }
 
 a:hover ~ .cursor,
@@ -160,8 +169,14 @@ body {
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   font-size: 14px;
-  cursor: pointer;
+  cursor: none;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .button {
+    cursor: pointer !important;
+  }
 }
 
 .hero-section .button:hover {
@@ -203,6 +218,27 @@ body {
 /* Add a radial gradient background effect */
 .bg-gradient-radial {
   background: radial-gradient(circle at 50% 0%, rgba(163, 22, 33, 0.1) 0%, transparent 50%);
+}
+
+/* Navigation styles */
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 /* Project card styles */
