@@ -1,12 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m } from 'framer-motion';
 import Image from 'next/image';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
-const MotionDiv = motion.div;
-const MotionH2 = motion.h2;
-const MotionA = motion.a;
+// Replace motion components with m components
+const MotionDiv = m.div;
+const MotionH2 = m.h2;
+const MotionA = m.a;
 
 const Work = () => {
   const containerVariants = {
@@ -81,91 +82,93 @@ const Work = () => {
   ];
 
   return (
-    <MotionDiv 
-      className="container mx-auto px-6 pt-4"
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      exit="exit"
-      viewport={{ once: true, amount: 0.1 }}
-    >
-      <MotionH2 
-        variants={itemVariants}
+    <LazyMotion features={domAnimation}>
+      <MotionDiv 
+        className="container mx-auto px-6 pt-4"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        exit="exit"
         viewport={{ once: true, amount: 0.1 }}
-        className="text-4xl font-bold mb-12"
       >
-        Featured Projects
-      </MotionH2>
+        <MotionH2 
+          variants={itemVariants}
+          viewport={{ once: true, amount: 0.1 }}
+          className="text-4xl font-bold mb-12"
+        >
+          Featured Projects
+        </MotionH2>
 
-      <div className="space-y-32">
-        {projects.map((project, index) => (
-          <MotionDiv
-            key={project.title}
-            variants={itemVariants}
-            viewport={{ once: true, amount: 0.1 }}
-            className="relative grid md:grid-cols-12 gap-8 items-center"
-          >
-            {/* Project Image */}
-            <MotionDiv 
-              className={`relative md:col-span-7 ${index % 2 === 1 ? 'md:order-2' : ''}`}
-              variants={itemVariants}
-              viewport={{ once: true, amount: 0.1 }}
-            >
-              <div className="relative aspect-video overflow-hidden rounded-lg">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-all duration-300 hover:scale-105"
-                />
-              </div>
-            </MotionDiv>
-
-            {/* Project Info */}
+        <div className="space-y-32">
+          {projects.map((project, index) => (
             <MotionDiv
-              className={`md:col-span-5 ${index % 2 === 1 ? 'md:order-1 md:text-right' : ''}`}
+              key={project.title}
               variants={itemVariants}
               viewport={{ once: true, amount: 0.1 }}
+              className="relative grid md:grid-cols-12 gap-8 items-center"
             >
-              <p className="text-sm mb-2 text-[var(--madder)]">Featured Project</p>
-              <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-              <div className="bg-[var(--madder)] text-[var(--snow)] p-6 rounded-lg mb-4 backdrop-blur-sm shadow-lg">
-                <p>{project.description}</p>
-              </div>
-              <ul className={`flex gap-4 mb-8 flex-wrap ${
-                index % 2 === 1 ? 'md:justify-end' : ''
-              }`}>
-                {project.tech.map((tech) => (
-                  <li key={tech} className="text-sm text-[var(--madder)]">
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-              <div className={`flex gap-4 ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
-                <MotionA
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--madder)] hover:text-[var(--madder-light)]"
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <FiGithub size={20} />
-                </MotionA>
-                <MotionA
-                  href={project.external}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--madder)] hover:text-[var(--madder-light)]"
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <FiExternalLink size={20} />
-                </MotionA>
-              </div>
+              {/* Project Image */}
+              <MotionDiv 
+                className={`relative md:col-span-7 ${index % 2 === 1 ? 'md:order-2' : ''}`}
+                variants={itemVariants}
+                viewport={{ once: true, amount: 0.1 }}
+              >
+                <div className="relative aspect-video overflow-hidden rounded-lg">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-all duration-300 hover:scale-105"
+                  />
+                </div>
+              </MotionDiv>
+
+              {/* Project Info */}
+              <MotionDiv
+                className={`md:col-span-5 ${index % 2 === 1 ? 'md:order-1 md:text-right' : ''}`}
+                variants={itemVariants}
+                viewport={{ once: true, amount: 0.1 }}
+              >
+                <p className="text-sm mb-2 text-[var(--madder)]">Featured Project</p>
+                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+                <div className="bg-[var(--madder)] text-[var(--snow)] p-6 rounded-lg mb-4 backdrop-blur-sm shadow-lg">
+                  <p>{project.description}</p>
+                </div>
+                <ul className={`flex gap-4 mb-8 flex-wrap ${
+                  index % 2 === 1 ? 'md:justify-end' : ''
+                }`}>
+                  {project.tech.map((tech) => (
+                    <li key={tech} className="text-sm text-[var(--madder)]">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                <div className={`flex gap-4 ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
+                  <MotionA
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--madder)] hover:text-[var(--madder-light)]"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <FiGithub size={20} />
+                  </MotionA>
+                  <MotionA
+                    href={project.external}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--madder)] hover:text-[var(--madder-light)]"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <FiExternalLink size={20} />
+                  </MotionA>
+                </div>
+              </MotionDiv>
             </MotionDiv>
-          </MotionDiv>
-        ))}
-      </div>
-    </MotionDiv>
+          ))}
+        </div>
+      </MotionDiv>
+    </LazyMotion>
   );
 };
 
