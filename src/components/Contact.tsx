@@ -78,10 +78,10 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: FiGithub, url: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: FiLinkedin, url: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: FiTwitter, url: 'https://twitter.com/yourusername', label: 'Twitter' },
-    { icon: FiMail, url: 'mailto:your@email.com', label: 'Email' },
+    { icon: FiGithub, url: 'https://github.com/Ankurdixitofficial', label: 'GitHub' },
+    { icon: FiLinkedin, url: 'https://linkedin.com/in/ankurdixitofficial', label: 'LinkedIn' },
+    { icon: FiTwitter, url: 'https://twitter.com/devankurdixit', label: 'Twitter' },
+    { icon: FiMail, url: 'mailto:ankurdixitofficial@email.com', label: 'Email' },
   ];
 
   return (
