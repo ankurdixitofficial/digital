@@ -81,7 +81,7 @@ const Contact = () => {
     { icon: FiGithub, url: 'https://github.com/Ankurdixitofficial', label: 'GitHub' },
     { icon: FiLinkedin, url: 'https://linkedin.com/in/ankurdixitofficial', label: 'LinkedIn' },
     { icon: FiTwitter, url: 'https://twitter.com/devankurdixit', label: 'Twitter' },
-    { icon: FiMail, url: 'mailto:ankurdixitofficial@email.com', label: 'Email' },
+    { icon: FiMail, url: 'mailto:ankurdixitofficial@gmail.com', label: 'Email' },
   ];
 
   return (
