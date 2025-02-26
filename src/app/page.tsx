@@ -61,7 +61,7 @@ export default function Home() {
           {/* About section with Snow background */}
           <m.section 
             id="about" 
-            className="content-section py-24 md:py-32"
+            className="content-section py-10 md:py-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -73,7 +73,7 @@ export default function Home() {
           {/* Skills section with Snow background */}
           <m.section 
             id="skills" 
-            className="content-section py-24 md:py-32"
+            className="content-section py-10 md:py-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -85,7 +85,7 @@ export default function Home() {
           {/* Work section with Snow background */}
           <m.section 
             id="work" 
-            className="content-section py-24 md:py-32"
+            className="content-section py-10 md:py-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -97,7 +97,7 @@ export default function Home() {
           {/* Resume section with Snow background */}
           <m.section 
             id="resume" 
-            className="content-section py-24 md:py-32"
+            className="content-section py-10 md:py-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -109,7 +109,7 @@ export default function Home() {
           {/* Contact section with Snow background */}
           <m.section 
             id="contact" 
-            className="content-section py-24 md:py-32"
+            className="content-section py-10 md:py-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}

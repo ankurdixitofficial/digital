@@ -51,8 +51,8 @@ const Work = () => {
       title: 'Personal Blog Website',
       description: 'Developed a dynamic personal blog using React for a responsive frontend and MongoDB for a scalable backend, enabling users to create, edit, and view posts with seamless data management and an engaging user interface.',
       tech: ['React', 'MongoDB', 'Node.js', 'Express', 'CSS'],
-      github: 'https://github.com',
-      external: 'https://project.com',
+      github: 'https://github.com/ankurdixitofficial/PythoGraphy',
+      external: 'https://pytho-graphy.vercel.app/',
       image: '/assets/blog-project.jpg',
     },
     {
@@ -94,12 +94,12 @@ const Work = () => {
         <MotionH2 
           variants={itemVariants}
           viewport={{ once: true, amount: 0.1 }}
-          className="text-4xl font-bold mb-12"
+          className="text-4xl font-bold mb-8"
         >
           Featured Projects
         </MotionH2>
 
-        <div className="space-y-32">
+        <div className="space-y-20">
           {projects.map((project, index) => (
             <MotionDiv
               key={project.title}
