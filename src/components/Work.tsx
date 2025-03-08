@@ -48,7 +48,7 @@ const Work = () => {
 
   const projects = [
     {
-      title: 'Personal Blog Website',
+      title: 'PythoGraphy - Personal Blog Platform',
       description: 'Developed a dynamic personal blog using React for a responsive frontend and MongoDB for a scalable backend, enabling users to create, edit, and view posts with seamless data management and an engaging user interface.',
       tech: ['React', 'MongoDB', 'Node.js', 'Express', 'CSS'],
       github: 'https://github.com/ankurdixitofficial/PythoGraphy',
@@ -56,7 +56,7 @@ const Work = () => {
       image: '/assets/blog-project.jpg',
     },
     {
-      title: 'Real Estate Website',
+      title: 'Haventure - Real Estate Platform',
       description: 'Built a real estate platform using the MERN stack (MongoDB, Express, React, Node.js) and Tailwind CSS for a modern, responsive design, allowing users to browse, list, and manage properties with an intuitive interface.',
       tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Tailwind CSS'],
       github: 'https://github.com',
@@ -72,7 +72,7 @@ const Work = () => {
       image: '/assets/scraping-project.jpg',
     },
     {
-      title: 'Smart Resume Screening Tool',
+      title: 'TalRec - AI-Powered Resume Screening Tool',
       description: 'Developing an AI-powered resume screening tool using Python for data processing and MongoDB for storing candidate data, enabling automated filtering and ranking of resumes based on job requirements.',
       tech: ['Python', 'MongoDB', 'Machine Learning', 'NLP'],
       github: 'https://github.com',
