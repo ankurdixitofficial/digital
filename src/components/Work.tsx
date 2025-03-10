@@ -52,7 +52,7 @@ const Work = () => {
       description: 'Developed a dynamic personal blog using React for a responsive frontend and MongoDB for a scalable backend, enabling users to create, edit, and view posts with seamless data management and an engaging user interface.',
       tech: ['React', 'MongoDB', 'Node.js', 'Express', 'CSS'],
       github: 'https://github.com/ankurdixitofficial/PythoGraphy',
-      external: 'https://pytho-graphy.vercel.app/',
+      external: 'https://pythography.ankurdixit.live/',
       image: '/assets/blog-project.jpg',
     },
     {
